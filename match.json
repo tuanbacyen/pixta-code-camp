@@ -1,0 +1,47 @@
+{
+  "match_gift": [
+    {
+      "boy": {
+        "doll": 2,
+        "robot": 10,
+        "lego": 10,
+        "musical": 8,
+        "car": 9,
+        "sport": 9,
+        "cooking": 4,
+        "fashion": 4,
+        "stuffed": 5,
+        "comic": 7,
+        "painting": 8
+      }
+    },
+    {
+      "girl": {
+        "doll": 10,
+        "robot": 3,
+        "lego": 6,
+        "musical": 8,
+        "car": 6,
+        "sport": 7,
+        "cooking": 8,
+        "fashion": 10,
+        "stuffed": 10,
+        "comic": 7,
+        "painting": 8
+      }
+    }
+  ],
+  "match_age": {
+    "in": 10,
+    "out": 2
+  },
+  "match_color": {
+    "like": 1.2,
+    "hate": 0.8,
+    "normal": 1
+  },
+  "match_interest_type": {
+    "match": 2,
+    "not_match": 1
+  }
+}
