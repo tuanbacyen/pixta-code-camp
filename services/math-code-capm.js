@@ -19,7 +19,7 @@ const get_time = (distance) => {
 }
 
 const get_y = (x) => {
-  return 90 * Math.sin(((x / 2 - 2) + 1)) / ((Math.pow(x / 2 - 3, 2) + 1)) + 15;
+  return 90 * Math.sin(x / 2 - 1) / (Math.pow((x / 2 - 3), 2) + 1) + 15
 }
 
 const get_hi = (genderType, age, time, color, interestType) => {
