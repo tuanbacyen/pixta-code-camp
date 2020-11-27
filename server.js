@@ -16,15 +16,14 @@ app.set('views', path.join(__dirname, '/views/'));
 app.set('view engine', 'ejs');
 app.set('layout', 'layouts/main-layout');
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 3001;
 
 app.listen(port, () => {
   console.log('Server start');
 });
 
 app.get('/', (req, res) => {
-  console.log('port 3000');
-  res.send('Hello World!');
+  res.send('Hello World! port 3001');
 });
 
 
