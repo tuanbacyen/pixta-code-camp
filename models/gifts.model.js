@@ -31,14 +31,9 @@ var GiftsSchema = new mongoose.Schema({
     type: Number,
     required: 'Field required!'
   },
-  loc: {
-    type: [Number]
-  },
   user_id: {
     type: Number,
   }
-},
-  { timestamps: { createdAt: 'created_at', updatedAt: "updated_at" } }
-);
+});
 
 mongoose.model('Gifts', GiftsSchema);
