@@ -13,6 +13,12 @@ var GiftsSchema = new mongoose.Schema({
     type: String,
     required: 'Field required!'
   },
+  min_age: {
+    type: Number
+  },
+  max_age: {
+    type: Number
+  },
   color: {
     type: String,
     required: 'Field required!'
@@ -27,6 +33,9 @@ var GiftsSchema = new mongoose.Schema({
   },
   loc: {
     type: [Number]
+  },
+  user_id: {
+    type: Number,
   }
 },
   { timestamps: { createdAt: 'created_at', updatedAt: "updated_at" } }

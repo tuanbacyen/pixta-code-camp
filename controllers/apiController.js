@@ -44,25 +44,21 @@ const api_list_gifts = (req, res) => {
 };
 
 const test = (req, res) => {
-  // const distance = get_distance(61.479, -58.313, 18.704, 110.68);
-  // const x = get_time(distance);
-  // const y = get_y(5.038);
-  // const hi = get_hi(7, 2, 3.0336, 1.2, 2);
-  // const area = { center: [47.55, -159.81], radius: 10 };
-  // const condition = { 'loc': { '$geoWithin': { '$centerSphere': [[47.55, -159.81], 10 / 3963.2] } } };
   const condition = { loc: { $geoWithin: { $centerSphere: [[-159.81, 47.55], 10 / 3963.2] } } };
-  // const condition = { loc: { '$near': [-75, 40], '$maxDistance': 10 } };
-  // const condition = {};
   Kids.find(condition).exec((error, docs) => {
     res.json({ data: docs });
   })
-  // res.json({ distance: distance, x: x, y: y, hi: hi });
 };
 
 function new_data(data_origin) {
   return data_origin.map((x) => {
     var o = Object.assign({}, x);
     o.loc = [x.longitude, x.latitude];
+    if (x.ages !== undefined) {
+      const ages = x.ages.split('-');
+      o.min_age = parseInt(ages[0]);
+      o.max_age = parseInt(ages[1]);
+    }
     return o;
   });
 }

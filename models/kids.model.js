@@ -35,6 +35,9 @@ var KidsSchema = new mongoose.Schema({
   },
   loc: {
     type: [Number]
+  },
+  gift_id: {
+    type: Number,
   }
 },
   { timestamps: { createdAt: 'created_at', updatedAt: "updated_at" } }
